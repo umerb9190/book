@@ -1,0 +1,25 @@
+/* components/Header.module.css */
+.header {
+    background-color: var(--primary-color); /* Adjust based on your theme */
+    padding: 1rem;
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navItem a {
+    color: white; /* Adjust text color */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.navItem a:hover {
+    color: var(--accent-color); /* Change on hover */
+}

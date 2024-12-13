@@ -1,0 +1,170 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .resultsHeader {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 2rem 0;
+    color: #1f2937;
+  }
+  
+  .resultsGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  
+  .bookCard {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: white;
+    height: 100%;
+  }
+  
+  .bookCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #f3f4f6;
+  }
+  
+  .bookInfo {
+    padding: 1rem;
+  }
+  
+  .bookTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+  
+  .authorName {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+  }
+  
+  .description {
+    font-size: 0.875rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .bookMeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+  
+  .price {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111827;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .starIcon {
+    color: #fbbf24;
+  }
+  
+  .ratingValue {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  /* Dark mode styles */
+  :global(.dark) .resultsHeader {
+    color: #f9fafb;
+  }
+  
+  :global(.dark) .bookCard {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+  
+  :global(.dark) .bookTitle {
+    color: #f9fafb;
+  }
+  
+  :global(.dark) .authorName {
+    color: #9ca3af;
+  }
+  
+  :global(.dark) .description {
+    color: #d1d5db;
+  }
+  
+  :global(.dark) .price {
+    color: #f9fafb;
+  }
+  
+  :global(.dark) .ratingValue {
+    color: #9ca3af;
+  }
+  
+  /* Responsive styles */
+  @media (min-width: 768px) {
+    .resultsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .resultsGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .noResults {
+    text-align: center;
+    padding: 3rem 0;
+    color: #6b7280;
+    font-size: 1.125rem;
+  }
+  
+  /* Loading state */
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+  }
+  
+  .loadingSpinner {
+    border: 4px solid #f3f4f6;
+    border-top: 4px solid #3b82f6;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

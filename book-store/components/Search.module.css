@@ -1,0 +1,252 @@
+.searchContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .searchForm {
+    margin-bottom: 24px;
+  }
+  
+  .searchInputGroup {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .searchInput {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.2s ease;
+  }
+  
+  .searchInput:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  .searchButton {
+    padding: 12px 24px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .searchButton:hover {
+    background-color: #2563eb;
+  }
+  
+  .historyContainer {
+    margin-top: 20px;
+  }
+  
+  .historyHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .historyTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+  }
+  
+  .clearButton {
+    font-size: 14px;
+    color: #dc2626;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .clearButton:hover {
+    background-color: rgba(220, 38, 38, 0.1);
+  }
+  
+  .historyTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .historyTag {
+    padding: 6px 12px;
+    background-color: #f3f4f6;
+    border-radius: 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+  }
+  
+  .historyTag:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .resultsContainer {
+    margin-top: 32px;
+  }
+  
+  .resultsHeader {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1f2937;
+  }
+  
+  .resultsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  
+  .bookCard {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: white;
+  }
+  
+  .bookCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .bookInfo {
+    padding: 16px;
+  }
+  
+  .bookTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 8px;
+  }
+  
+  .bookAuthor {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 8px;
+  }
+  
+  .bookDescription {
+    font-size: 14px;
+    color: #4b5563;
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .bookMeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .bookPrice {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+  }
+  
+  .bookRating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #6b7280;
+  }
+  
+  .ratingIcon {
+    color: #fbbf24;
+  }
+  
+  /* Dark mode styles */
+  :global(.dark) .searchInput {
+    background-color: #1f2937;
+    border-color: #374151;
+    color: white;
+  }
+  
+  :global(.dark) .searchInput:focus {
+    border-color: #3b82f6;
+  }
+  
+  :global(.dark) .historyTitle {
+    color: #f3f4f6;
+  }
+  
+  :global(.dark) .historyTag {
+    background-color: #374151;
+    color: #f3f4f6;
+  }
+  
+  :global(.dark) .historyTag:hover {
+    background-color: #4b5563;
+  }
+  
+  :global(.dark) .bookCard {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+  
+  :global(.dark) .bookTitle {
+    color: #f3f4f6;
+  }
+  
+  :global(.dark) .bookAuthor {
+    color: #9ca3af;
+  }
+  
+  :global(.dark) .bookDescription {
+    color: #d1d5db;
+  }
+  
+  :global(.dark) .bookPrice {
+    color: #f3f4f6;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 640px) {
+    .searchInputGroup {
+      flex-direction: column;
+    }
+  
+    .searchButton {
+      width: 100%;
+    }
+  
+    .resultsGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Loading state styles */
+  .loading {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  
+  /* No results state */
+  .noResults {
+    text-align: center;
+    padding: 48px 0;
+    color: #6b7280;
+  }
